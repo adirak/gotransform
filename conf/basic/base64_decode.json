@@ -1,0 +1,53 @@
+{
+    "input": {
+        "content": "",
+        "prefix": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJlS2U2bUh3MHdzR080MEpic01YdkJyVUIzWEE3WlFhckRFUUVPTXZ6YVUwIn0",
+        "suffix": ""
+    },
+    "transform": {
+        "filterInput": [
+            "content",
+            "prefix",
+            "suffix"
+        ],
+        "filterOutput": [
+            "dContent",
+            "dPrefix",
+            "dSuffix"
+        ],
+        "process": [
+            {
+                "__id": "1",
+                "input": [
+                    "content"
+                ],
+                "inputLabels": "string",
+                "output": [
+                    "dContent"
+                ],
+                "outputLabels": "string",
+                "type": "base64_decode"
+            },
+            {
+                "__id": "2",
+                "input": [
+                    "prefix"
+                ],
+                "output": [
+                    "dPrefix"
+                ],
+                "type": "base64_decode"
+            },
+            {
+                "__id": "3",
+                "input": [
+                    "suffix"
+                ],
+                "output": [
+                    "dSuffix"
+                ],
+                "type": "base64_decode"
+            }
+        ]
+    }
+}

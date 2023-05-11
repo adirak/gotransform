@@ -1,0 +1,18 @@
+{
+    "input": {
+    },
+    "transform": {     
+        "process": [
+            {
+                "__id": "1",
+                "input": [                   
+                ],                
+                "output": [
+                    "ran"
+                ],
+                "value": "1000",
+                "type": "random_int"
+            }
+        ]
+    }
+}

@@ -1,0 +1,4 @@
+github.com/adirak/gojsonfilter v0.0.0-20230510085751-e986a628237d h1:WHukUQ/1tY1AP0U5Ad355zKHjJVsQFg6D8zeuW2buL0=
+github.com/adirak/gojsonfilter v0.0.0-20230510085751-e986a628237d/go.mod h1:9oGtD05+5JHCGkNKUg/cl+q9dV4qr83W9EKF2h/EyGY=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=

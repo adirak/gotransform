@@ -1,0 +1,30 @@
+{
+    "input": {
+        "in": "Apple Apple Apple"
+    },
+    "transform": {
+        "filterInput": [
+            "in"
+        ],
+        "filterOutput": [
+            "out"
+        ],
+        "process": [
+            {
+                "__id": "1",
+                "from": "Apple",
+                "input": [
+                    "in"
+                ],
+                "inputLabels": "string",
+                "output": [
+                    "out"
+                ],
+                "outputLabels": "string",
+                "position": "Last",
+                "to": "Graph",
+                "type": "replace_string"
+            }
+        ]
+    }
+}

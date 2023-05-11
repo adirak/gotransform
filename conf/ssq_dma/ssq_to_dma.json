@@ -1,0 +1,62 @@
+{
+    "input": {
+        "_hyper_code": "200",
+        "_hyper_message": "Success",
+        "restResult": {
+            "dma_inquiry_m_carmodelResponse": {
+                "Returncode": "EWI-0000I",
+                "Runmessage": "Your request for the container has been executed successfully.",
+                "content": {
+                    "CarModelListCollection": [
+                        {
+                            "CarModelList": {
+                                "ModelID": "4 RUNNER|1102",
+                                "ModelName": "4 RUNNER"
+                            }
+                        },
+                        {
+                            "CarModelList": {
+                                "ModelID": "86|1101",
+                                "ModelName": "86"
+                            }
+                        },
+                        {
+                            "CarModelList": {
+                                "ModelID": "ALPHARD|1102",
+                                "ModelName": "ALPHARD"
+                            }
+                        },
+                        {
+                            "CarModelList": {
+                                "ModelID": "ALPHARD 2.5|1102",
+                                "ModelName": "ALPHARD 2.5"
+                            }
+                        },
+                        {
+                            "CarModelList": {
+                                "ModelID": "ALPHARD 3.5|1102",
+                                "ModelName": "ALPHARD 3.5"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "transform": {
+        "process": [
+            {
+                "__id": "1",
+                "input": [
+                    "restResult"
+                ],
+                "output": [
+                    "resultData",
+                    "success",
+                    "msg"
+                ],
+                "type": "ssq_to_dma"
+            }
+        ]
+    }
+}

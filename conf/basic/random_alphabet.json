@@ -1,0 +1,19 @@
+{
+    "input": {
+    },
+    "transform": {     
+        "process": [
+            {
+                "__id": "1",
+                "input": [                   
+                ],                
+                "output": [
+                    "ran"
+                ],
+                "value": "5",
+                "valueType":"number",
+                "type": "random_alphabet"
+            }
+        ]
+    }
+}

@@ -1,0 +1,87 @@
+{
+	"data": {
+		"name": "Supote",
+		"surname": "Sirimahayarn",
+		"clientId": "112233445566",
+		"age": 42,
+		"sex": "M",
+		"group_code": "Radio28,19800218",
+		"block": "aaaa-bbbb-cccc-dddd-eeee-xxxx",
+		"trimMe": "\n   Aloha \n\r\t ",
+		"birthDate": "1980-02-18",
+		"number": 123456.789012,
+		"step": 100,
+		"strNum": "100.10",
+		"strBool": "TruE",
+		"animals": [
+			{
+				"aname": "Diggy",
+				"akind": "dog"
+			},
+			{
+				"aname": "Tom",
+				"akind": "cat"
+			},
+			{
+				"aname": "Bella",
+				"akind": "bird"
+			},
+			{
+				"aname": "Meep Meep",
+				"akind": "bird"
+			}
+		],
+		"birds": [
+			{
+				"aname": "Bella",
+				"akind": "bird",
+				"age": 4
+			},
+			{
+				"aname": "Meep Meep",
+				"akind": "bird",
+				"age": 25
+			},
+			{
+				"aname": "Suga",
+				"akind": "bird",
+				"age": 3
+			},
+			{
+				"aname": "Sunlight",
+				"akind": "bird",
+				"age": 2
+			}
+		],
+		"workers": [
+			{
+				"name": "Tong",
+				"pos": "Senior"
+			},
+			{
+				"name": "Tor",
+				"pos": "Senior"
+			},
+			{
+				"name": "Oat",
+				"pos": "Senior"
+			},
+			{
+				"name": "Ton",
+				"pos": "Developer"
+			},
+			{
+				"name": "Siam Type",
+				"pos": "Developer"
+			},
+			{
+				"name": "Num",
+				"pos": "Junior"
+			},
+			{
+				"name": "Toon",
+				"pos": "Junior"
+			}
+		]
+	}
+}

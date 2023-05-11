@@ -1,0 +1,65 @@
+{
+	"filterInput": [
+		"name",
+		"surname",
+		"clientId",
+		"age",
+		"sex",
+		"group_code"
+	],
+	"process": [
+		{
+			"input": [
+				"name",
+				"surname"
+			],
+			"output": [
+				"fullname"
+			],
+			"type": "merge_string",
+			"combine": "-"
+		},
+		{
+			"input": [
+				"group_code"
+			],
+			"output": [
+				"group",
+				"$tmp.var0001"
+			],
+			"type": "split_string",
+			"split": ","
+		},
+		{
+			"input": [
+				"$tmp.var0001"
+			],
+			"output": [
+				"code"
+			],
+			"type": "number_format",
+			"format": "%010d"
+		},
+		{
+			"input": [
+				"age",
+				"sex",
+				"clientId"
+			],
+			"output": [
+				"age",
+				"gender",
+				"clientId"
+			],
+			"type": "rename"
+		}
+	],
+	"filterOutput": [
+		"fullname",
+		"clientId",
+		"age",
+		"gender",
+		"group",
+		"code"
+	]
+}

@@ -1,0 +1,47 @@
+{
+    "ssqData": {
+        "dma_inquiry_m_carmodelRequest": {
+            "Username": "",
+            "content": {
+                "myListCollection": [
+                    {
+                        "myList": {
+                            "ModelID": "4 RUNNER|1102",
+                            "ModelName": "4 RUNNER"
+                        }
+                    },
+                    {
+                        "myList": {
+                            "ModelID": "86|1101",
+                            "ModelName": "86"
+                        }
+                    },
+                    {
+                        "myList": {
+                            "ModelID": "ALPHARD|1102",
+                            "ModelName": "ALPHARD"
+                        }
+                    },
+                    {
+                        "myList": {
+                            "ModelID": "ALPHARD 2.5|1102",
+                            "ModelName": "ALPHARD 2.5"
+                        }
+                    },
+                    {
+                        "myList": {
+                            "ModelID": "ALPHARD 3.5|1102",
+                            "ModelName": "ALPHARD 3.5"
+                        }
+                    }
+                ],
+                "name": "Supote",
+                "surname": "Sirimahayarn"
+            },
+            "ewitoken": "",
+            "usergroup": "",
+            "version": "1.0",
+            "workstation": ""
+        }
+    }
+}

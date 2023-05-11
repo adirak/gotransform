@@ -1,0 +1,26 @@
+{
+    "content": {
+        "clientId": "3214569870120",
+        "clientName": "TOYOTA",
+        "CarModelList": [
+            {
+                "ModelName": "4 RUNNER",
+                "ModelID": "4 RUNNER|1102"
+            },
+            {
+                "ModelName": "86",
+                "ModelID": "86|1101"
+            },
+            {
+                "ModelName": "ALPHARD",
+                "ModelID": "ALPHARD|1102"
+            },
+            {
+                "ModelName": "ALPHARD 2.5",
+                "ModelID": "ALPHARD 2.5|1102"
+            }
+        ]
+    },
+    "Returncode": "EWI-0000I",
+    "Runmessage": "Your request for the container has been executed successfully."
+}

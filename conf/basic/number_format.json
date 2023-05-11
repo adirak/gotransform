@@ -1,0 +1,32 @@
+{
+    "input": {
+        "num": 99
+    },
+    "transform": {
+        "filterInput": [
+            "num"
+        ],
+        "filterOutput": [
+            "numFormat"
+        ],
+        "process": [
+            {
+                "__id": "1",
+                "decDigit": 3,
+                "decimalSeparator": ".",
+                "input": [
+                    "num"
+                ],
+                "inputLabels": "number",
+                "intDigit": 6,
+                "output": [
+                    "numFormat"
+                ],
+                "outputLabels": "string",
+                "padding": " ",
+                "thousandSeparator": "",
+                "type": "number_format"
+            }
+        ]
+    }
+}

@@ -1,0 +1,351 @@
+{
+    "data": {
+        "input": {
+            "name": "Supote",
+            "surname": "Sirimahayarn",
+            "clientId": "112233445566",
+            "age": 42,
+            "sex": "M",
+            "group_code": "Radio28,19800218",
+            "block": "aaaa-bbbb-cccc-dddd",
+            "trimMe": "\n   Aloha \n\r\t ",
+            "birthDate": "1980-02-18",
+            "number": 123456.789012,
+            "step": 100,
+            "strNum": "100.10",
+            "strBool": "FaLsE",
+            "animals": [
+                {
+                    "aname": "Diggy",
+                    "akind": "dog"
+                },
+                {
+                    "aname": "Tom",
+                    "akind": "cat"
+                },
+                {
+                    "aname": "Bella",
+                    "akind": "bird"
+                },
+                {
+                    "aname": "Meep Meep",
+                    "akind": "bird"
+                }
+            ],
+            "birds": [
+                {
+                    "aname": "Bella",
+                    "akind": "bird",
+                    "age": 4
+                },
+                {
+                    "aname": "Meep Meep",
+                    "akind": "bird",
+                    "age": 25
+                },
+                {
+                    "aname": "Suga",
+                    "akind": "bird",
+                    "age": 3
+                },
+                {
+                    "aname": "Sunlight",
+                    "akind": "bird",
+                    "age": 2
+                }
+            ],
+            "workers": [
+                {
+                    "name": "Tong",
+                    "pos": "Senior"
+                },
+                {
+                    "name": "Tor",
+                    "pos": "Senior"
+                },
+                {
+                    "name": "Oat",
+                    "pos": "Senior"
+                },
+                {
+                    "name": "Ton",
+                    "pos": "Developer"
+                },
+                {
+                    "name": "Siam Type",
+                    "pos": "Developer"
+                },
+                {
+                    "name": "Num",
+                    "pos": "Junior"
+                },
+                {
+                    "name": "Toon",
+                    "pos": "Junior"
+                }
+            ]
+        },
+        "transform": {
+            "filterInput": [
+                "name",
+                "surname",
+                "clientId",
+                "age",
+                "sex",
+                "group_code"
+            ],
+            "process": [
+                {
+                    "input": [
+                        "name",
+                        "surname"
+                    ],
+                    "output": [
+                        "fullname"
+                    ],
+                    "type": "merge_string",
+                    "combine": "-"
+                },
+                {
+                    "input": [
+                        "group_code"
+                    ],
+                    "output": [
+                        "group",
+                        "$tmp.var0001"
+                    ],
+                    "type": "split_string",
+                    "split": ","
+                },
+                {
+                    "input": [
+                        "$tmp.var0001"
+                    ],
+                    "output": [
+                        "code"
+                    ],
+                    "type": "number_format",
+                    "format": "%010d"
+                },
+                {
+                    "input": [
+                        "age",
+                        "sex",
+                        "clientId"
+                    ],
+                    "output": [
+                        "age",
+                        "gender",
+                        "clientId"
+                    ],
+                    "type": "rename_fields"
+                },
+                {
+                    "input": [
+                        "block"
+                    ],
+                    "output": [
+                        "blockArr"
+                    ],
+                    "type": "split_string_array",
+                    "split": "-"
+                },
+                {
+                    "input": [
+                        "block"
+                    ],
+                    "output": [
+                        "aaa",
+                        "bbb",
+                        "ccc",
+                        "ddd"
+                    ],
+                    "type": "split_string",
+                    "split": "-"
+                },
+                {
+                    "input": [
+                        "block"
+                    ],
+                    "output": [
+                        "block2"
+                    ],
+                    "type": "replace_string",
+                    "position": "All",
+                    "from": "-",
+                    "to": "|"
+                },
+                {
+                    "input": [
+                        "trimMe"
+                    ],
+                    "output": [
+                        "trimMe"
+                    ],
+                    "type": "trim_string"
+                },
+                {
+                    "input": [],
+                    "output": [
+                        "uuid"
+                    ],
+                    "type": "gen_uuid",
+                    "num": 32
+                },
+                {
+                    "input": [],
+                    "output": [
+                        "cTime"
+                    ],
+                    "type": "get_current_time",
+                    "format": "2006-02-01 15:04:05"
+                },
+                {
+                    "input": [
+                        "step"
+                    ],
+                    "output": [
+                        "stepUp"
+                    ],
+                    "type": "increase_num",
+                    "step": 10
+                },
+                {
+                    "input": [
+                        "step"
+                    ],
+                    "output": [
+                        "stepDown"
+                    ],
+                    "type": "decrease_num",
+                    "step": 30
+                },
+                {
+                    "input": [
+                        "strNum"
+                    ],
+                    "output": [
+                        "toNum"
+                    ],
+                    "type": "to_number",
+                    "valueType": "decimal"
+                },
+                {
+                    "input": [
+                        "strBool"
+                    ],
+                    "output": [
+                        "toBool"
+                    ],
+                    "type": "to_boolean"
+                },
+                {
+                    "input": [],
+                    "output": [
+                        "fixValue"
+                    ],
+                    "type": "fix_value",
+                    "valueType": "string",
+                    "value": "What's the fuck?"
+                },
+                {
+                    "input": [
+                        "name",
+                        "surname"
+                    ],
+                    "output": [
+                        "animals"
+                    ],
+                    "type": "add_to_list",
+                    "position": "First"
+                },
+                {
+                    "input": [
+                        "clientId",
+                        "group_code"
+                    ],
+                    "output": [
+                        "animals"
+                    ],
+                    "type": "add_to_list",
+                    "position": "First"
+                },
+                {
+                    "input": [
+                        "sex",
+                        "age"
+                    ],
+                    "output": [
+                        "animals"
+                    ],
+                    "type": "copy_to_list"
+                },
+                {
+                    "input": [
+                        "birds"
+                    ],
+                    "output": [
+                        "aname",
+                        "akind",
+                        "age"
+                    ],
+                    "type": "copy_from_list",
+                    "index": "0"
+                },
+                {
+                    "input": [
+                        "animals",
+                        "birds"
+                    ],
+                    "output": [
+                        "joinedAnimal"
+                    ],
+                    "type": "join_list",
+                    "fields": "aname, akind",
+                    "fields2": "aname, akind",
+                    "operator": "AND"
+                },
+                {
+                    "input": [
+                        "workers"
+                    ],
+                    "output": [
+                        "delWorkers"
+                    ],
+                    "type": "delete_record",
+                    "index": "@first"
+                },
+                {
+                    "input": [
+                        "workers"
+                    ],
+                    "output": [
+                        "filterWorkers"
+                    ],
+                    "type": "filter_record",
+                    "fields": "pos",
+                    "value": "Junior",
+                    "operator": "AND"
+                },
+                 {
+                    "input": [
+                        "birds"
+                    ],
+                    "output": [
+                        "totalAge"
+                    ],
+                    "type": "sum_fields_in_list",
+                    "fields": "age"
+                }
+            ],
+            "filterOutput": [
+                "fullname",
+                "clientId",
+                "age",
+                "gender",
+                "group",
+                "code"
+            ]
+        }
+    }
+}
